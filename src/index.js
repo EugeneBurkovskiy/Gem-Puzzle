@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     gameOptions.numArr = checkSolution([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, '']);
     createPuzzle(gameOptions, field);
+
     moves.textContent = `Moves: ${gameOptions.movesCounter}`;
 
     gameOptions.secondsCounter < 10 ? time.textContent = `Time: ${gameOptions.minutesCounter}:0${gameOptions.secondsCounter}` : time.textContent = `Time: ${gameOptions.minutesCounter}:${gameOptions.secondsCounter}`;
