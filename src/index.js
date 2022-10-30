@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     footer.append(audioControls, sizeBar);
     body.prepend(container);
 
+
     let gameResultsArr;
 
     let gameOptions = {
@@ -109,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         movesCounter: 0,
         numArr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, ''],
     };
+
     try {
         gameResultsArr = JSON.parse(localStorage.getItem('results'));
         if (gameResultsArr.length === 0) {
