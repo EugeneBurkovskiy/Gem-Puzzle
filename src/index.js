@@ -142,10 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (stopBtn.classList.contains('game__stop_active')) {
             stopField.innerHTML = '<p>Paused</p>';
             stopField.style.top = '0%';
+            menuBtn.style.pointerEvents = 'none';
             clearInterval(timer);
         } else {
             stopField.style.top = '-100%';
             timer = startTimer(gameOptions, time);
+            menuBtn.style.pointerEvents = '';
         }
     });
 
@@ -170,10 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
             menuField.append(loadBtn, scoreBtn);
             stopField.append(menuField);
             stopField.style.top = '0%';
+            stopBtn.style.pointerEvents = 'none';
             clearInterval(timer);
         } else {
             stopField.style.top = '-100%';
             timer = startTimer(gameOptions, time);
+            stopBtn.style.pointerEvents = '';
         }
     });
 
